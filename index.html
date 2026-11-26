@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,242 +9,173 @@
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   background: #000000;
   color: #decdbf;
   font-family: Arial, sans-serif;
+  padding: 55px 20px;
 }
 
-/* MAIN SECTIONS */
-
-.social-section,
-.spotify-section {
-  width: 100%;
-  padding: 35px 20px;
+.container {
+  max-width: 900px;
+  margin: auto;
 }
 
-.section-label {
+header {
   text-align: center;
-  font-size: 9px;
-  letter-spacing: 4px;
-  color: #decdbf;
-  margin-bottom: 25px;
+  margin-bottom: 42px;
 }
 
-/* MIDNIGHT NEWS */
-
-.midnight-feature {
-  max-width: 850px;
-  margin: 0 auto 25px;
-  padding: 17px 25px;
-  background: #0b0b0b;
-  border: 1px solid rgba(222,205,191,.45);
-  text-align: center;
-  transition: .3s ease;
-}
-
-.midnight-feature:hover {
-  border-color: #decdbf;
-  box-shadow: 0 10px 35px rgba(222,205,191,.07);
-}
-
-.midnight-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  font-size: 8px;
-  letter-spacing: 2px;
-  color: #decdbf;
-  opacity: .7;
-  margin-bottom: 12px;
-}
-
-.midnight-feature h2 {
+header h1 {
   font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(27px, 5vw, 42px);
-  letter-spacing: 3px;
-  margin: 8px 0 5px;
-  color: #decdbf;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
 }
 
-.midnight-tagline {
+header p {
+  color: #bfae9f;
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 14px;
-  margin: 5px 0 8px;
-  color: #decdbf;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
-.midnight-status {
-  font-size: 8px;
-  letter-spacing: 3px;
-  color: #decdbf;
-  margin: 8px 0;
+.ornament {
+  color: #806f61;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
 
-.midnight-divider {
-  width: 45px;
-  height: 1px;
-  background: #decdbf;
-  opacity: .5;
-  margin: 12px auto;
+/* MAIN GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-.midnight-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #decdbf;
-  color: #decdbf;
-  text-decoration: none;
-  font-size: 9px;
+/* CARDS */
+
+.card {
+  background: #0b0b0b;
+  border: 1px solid #51463e;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background: #101010;
+  border-color: #a89583;
+  transform: translateY(-3px);
+}
+
+.number {
+  font-size: 10px;
   letter-spacing: 2px;
-  margin: 5px 0 8px;
-  transition: .3s ease;
+  color: #a89583;
+  margin-bottom: 20px;
 }
 
-.midnight-button:hover {
-  background: #decdbf;
-  color: #000000;
+.card h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
-.midnight-footer {
-  font-size: 8px;
+.description {
+  color: #bfae9f;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.small-label {
+  font-size: 10px;
   letter-spacing: 2px;
-  opacity: .6;
-  margin-top: 8px;
+  color: #a89583;
+  margin-top: 20px;
 }
 
 /* SOCIAL LINKS */
 
 .social-links {
-  max-width: 850px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
 }
 
-.social-link {
+.social-links a {
   display: block;
-  width: 100%;
-  padding: 15px 20px;
-  background: #0b0b0b;
-  border: 1px solid rgba(222,205,191,.35);
-  color: #decdbf;
+  text-align: center;
   text-decoration: none;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: 3px;
-  transition: .3s ease;
-}
-
-.social-link:hover {
-  border-color: #decdbf;
-  background: #111111;
-}
-
-/* SPOTIFY SECTION */
-
-.spotify-section {
-  padding-top: 40px;
-  padding-bottom: 100px;
-}
-
-.spotify-heading {
-  text-align: center;
-  margin: 0 auto 45px;
-}
-
-.eyebrow {
-  font-size: 9px;
-  letter-spacing: 4px;
   color: #decdbf;
-  opacity: .8;
+  border: 1px solid #51463e;
+  padding: 13px 8px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
 }
 
-.spotify-heading h2 {
-  font-family: Georgia, serif;
-  font-size: clamp(38px, 7vw, 60px);
-  font-weight: 400;
-  margin: 18px 0 12px;
-  color: #decdbf;
+.social-links a:hover {
+  background: #171412;
+  border-color: #a89583;
 }
 
-.spotify-heading p {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 15px;
-  color: #decdbf;
-  opacity: .75;
+/* SPOTIFY */
+
+.spotify {
+  grid-column: 1 / -1;
 }
 
-.spotify-frame {
-  max-width: 750px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid rgba(222,205,191,.5);
-  background: #0b0b0b;
-  box-shadow: 0 15px 50px rgba(222,205,191,.05);
-  transition: .4s ease;
-}
-
-.spotify-frame:hover {
-  border-color: #decdbf;
-  box-shadow: 0 15px 55px rgba(222,205,191,.1);
-}
-
-.spotify-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 3px 18px;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #decdbf;
-}
-
-.spotify-frame iframe {
+.spotify iframe {
   display: block;
   width: 100%;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 22px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  margin-top: 35px;
+  color: #806f61;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
-  .social-section {
-    padding: 25px 14px;
+  body {
+    padding: 40px 16px;
   }
 
-  .midnight-feature {
-    padding: 15px 13px;
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .midnight-top {
-    font-size: 7px;
-    letter-spacing: 1px;
+  .spotify {
+    grid-column: auto;
   }
 
-  .midnight-feature h2 {
-    letter-spacing: 2px;
+  header h1 {
+    font-size: 24px;
   }
 
-  .spotify-frame {
-    padding: 12px;
-  }
-
-  .spotify-top {
-    font-size: 8px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
+  .card {
+    padding: 22px;
   }
 }
 </style>
@@ -251,95 +183,92 @@ body {
 
 <body>
 
-<!-- MIDNIGHT.NEWS AND SOCIAL LINKS -->
+<div class="container">
 
-<section class="social-section">
+  <header>
+    <h1>MY LITTLE CORNER</h1>
+    <p>an archive of things I love.</p>
+    <div class="ornament">✦ ───── ✦ ───── ✦</div>
+  </header>
 
-  <div class="section-label">✦ &nbsp; MY LITTLE CORNER &nbsp; ✦</div>
+  <main class="grid">
 
-  <div class="midnight-feature">
+    <!-- 01: PUBLICATION -->
+    <section class="card">
+      <div class="number">01 / PUBLICATION</div>
 
-    <div class="midnight-top">
-      <span>INDEPENDENT DIGITAL MAGAZINE</span>
-      <span>NOW LIVE ✦</span>
-    </div>
+      <h2>MIDNIGHT.NEWS</h2>
 
-    <h2>MIDNIGHT.NEWS</h2>
+      <p class="description">
+        Every hour has a story.
+      </p>
 
-    <p class="midnight-tagline">Every hour has a story.</p>
+      <div class="small-label">NOW LIVE ✦</div>
 
-    <div class="midnight-divider"></div>
+      <a href="https://xinasia.github.io/MIDNIGHT.NEWS/"
+         target="_blank"
+         style="display:inline-block; margin-top:20px;
+         color:#decdbf; text-decoration:none;
+         border-bottom:1px solid #806f61;
+         padding-bottom:5px; font-size:11px;
+         letter-spacing:1px;">
+        EXPLORE THE EDITION ↗
+      </a>
+    </section>
 
-    <a
-      class="midnight-button"
-      href="https://xinasia.github.io/MIDNIGHT.NEWS/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      EXPLORE THE PUBLICATION ↗
-    </a>
 
-    <div class="midnight-footer">
-      MIDNIGHT.NEWS · THE DAILY EDITION
-    </div>
+    <!-- 02: SOCIALS -->
+    <section class="card">
+      <div class="number">02 / ELSEWHERE</div>
 
-  </div>
+      <h2>Find me.</h2>
 
-  <div class="social-links">
+      <p class="description">
+        little corners of the internet.
+      </p>
 
-    <a
-      class="social-link"
-      href="https://pinterest.com/chrisxy_xin/_profile/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      PINTEREST ↗
-    </a>
+      <div class="social-links">
 
-    <a
-      class="social-link"
-      href="https://www.tiktok.com/@chrisxy.xin"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      TIKTOK ↗
-    </a>
+        <a href="https://pinterest.com/chrisxy_xin/_profile/"
+           target="_blank">
+          PINTEREST ↗
+        </a>
 
-  </div>
+        <a href="https://www.tiktok.com/@chrisxy.xin"
+           target="_blank">
+          TIKTOK ↗
+        </a>
 
-</section>
+      </div>
+    </section>
 
-<!-- SPOTIFY -->
 
-<section class="spotify-section">
+    <!-- 03: SPOTIFY -->
+    <section class="card spotify">
+      <div class="number">03 / LISTEN</div>
 
-  <div class="section-label">✦ &nbsp; THE SOUNDTRACK &nbsp; ✦</div>
+      <h2>My Soundtrack.</h2>
 
-  <div class="spotify-heading">
-    <span class="eyebrow">NOW PLAYING IN MY WORLD</span>
-    <h2>My Soundtrack.</h2>
-    <p>songs, moods & little moments.</p>
-  </div>
+      <p class="description">
+        songs, moods & little moments.
+      </p>
 
-  <div class="spotify-frame">
+      <iframe
+        src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?utm_source=generator&theme=0"
+        height="352"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
 
-    <div class="spotify-top">
-      <span>MY PLAYLIST</span>
-      <span>✦ 01</span>
-    </div>
+    </section>
 
-    <iframe
-      src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?utm_source=generator&theme=0"
-      height="352"
-      frameborder="0"
-      allowfullscreen
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
+  </main>
 
-  </div>
+  <footer>
+    MY LITTLE CORNER · EST. 2026
+  </footer>
 
-</section>
+</div>
 
 </body>
 </html>
