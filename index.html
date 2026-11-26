@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Little Corner</title>
+<title>PRIVATE EDITION</title>
 
 <style>
 * {
@@ -15,7 +15,7 @@
 
 body {
   background: #000000;
-  color: #decdbf;
+  color: #F0DFCF;
   font-family: Arial, sans-serif;
   padding: 55px 20px;
 }
@@ -24,6 +24,8 @@ body {
   max-width: 900px;
   margin: auto;
 }
+
+/* HEADER */
 
 header {
   text-align: center;
@@ -34,12 +36,12 @@ header h1 {
   font-family: Georgia, serif;
   font-size: 30px;
   font-weight: normal;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   margin-bottom: 10px;
 }
 
 header p {
-  color: #bfae9f;
+  color: #D4C1B0;
   font-family: Georgia, serif;
   font-style: italic;
   font-size: 13px;
@@ -47,7 +49,7 @@ header p {
 }
 
 .ornament {
-  color: #806f61;
+  color: #A58A75;
   margin-top: 20px;
   font-size: 12px;
   letter-spacing: 5px;
@@ -64,22 +66,22 @@ header p {
 /* CARDS */
 
 .card {
-  background: #0b0b0b;
-  border: 1px solid #51463e;
+  background: #11100F;
+  border: 1px solid #796656;
   padding: 25px;
   transition: 0.3s ease;
 }
 
 .card:hover {
-  background: #101010;
-  border-color: #a89583;
+  background: #171513;
+  border-color: #C5AA94;
   transform: translateY(-3px);
 }
 
 .number {
   font-size: 10px;
   letter-spacing: 2px;
-  color: #a89583;
+  color: #C5AA94;
   margin-bottom: 20px;
 }
 
@@ -91,7 +93,7 @@ header p {
 }
 
 .description {
-  color: #bfae9f;
+  color: #D4C1B0;
   font-family: Georgia, serif;
   font-size: 13px;
   font-style: italic;
@@ -101,8 +103,27 @@ header p {
 .small-label {
   font-size: 10px;
   letter-spacing: 2px;
-  color: #a89583;
+  color: #C5AA94;
   margin-top: 20px;
+}
+
+/* PUBLICATION LINK */
+
+.publication-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #F0DFCF;
+  text-decoration: none;
+  border-bottom: 1px solid #A58A75;
+  padding-bottom: 5px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.publication-link:hover {
+  color: #ffffff;
+  border-color: #F0DFCF;
 }
 
 /* SOCIAL LINKS */
@@ -118,8 +139,8 @@ header p {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #decdbf;
-  border: 1px solid #51463e;
+  color: #F0DFCF;
+  border: 1px solid #796656;
   padding: 13px 8px;
   font-size: 11px;
   letter-spacing: 1px;
@@ -127,8 +148,8 @@ header p {
 }
 
 .social-links a:hover {
-  background: #171412;
-  border-color: #a89583;
+  background: #201B17;
+  border-color: #C5AA94;
 }
 
 /* SPOTIFY */
@@ -150,7 +171,7 @@ header p {
 footer {
   text-align: center;
   margin-top: 35px;
-  color: #806f61;
+  color: #A58A75;
   font-size: 10px;
   letter-spacing: 2px;
 }
@@ -185,8 +206,10 @@ footer {
 
 <div class="container">
 
+  <!-- HEADER -->
+
   <header>
-    <h1>MY LITTLE CORNER</h1>
+    <h1>PRIVATE EDITION</h1>
     <p>an archive of things I love.</p>
     <div class="ornament">✦ ───── ✦ ───── ✦</div>
   </header>
@@ -194,7 +217,9 @@ footer {
   <main class="grid">
 
     <!-- 01: PUBLICATION -->
+
     <section class="card">
+
       <div class="number">01 / PUBLICATION</div>
 
       <h2>MIDNIGHT.NEWS</h2>
@@ -205,20 +230,20 @@ footer {
 
       <div class="small-label">NOW LIVE ✦</div>
 
-      <a href="https://xinasia.github.io/MIDNIGHT.NEWS/"
+      <a class="publication-link"
+         href="https://xinasia.github.io/MIDNIGHT.NEWS/"
          target="_blank"
-         style="display:inline-block; margin-top:20px;
-         color:#decdbf; text-decoration:none;
-         border-bottom:1px solid #806f61;
-         padding-bottom:5px; font-size:11px;
-         letter-spacing:1px;">
+         rel="noopener noreferrer">
         EXPLORE THE EDITION ↗
       </a>
+
     </section>
 
 
     <!-- 02: SOCIALS -->
+
     <section class="card">
+
       <div class="number">02 / ELSEWHERE</div>
 
       <h2>Find me.</h2>
@@ -230,21 +255,26 @@ footer {
       <div class="social-links">
 
         <a href="https://pinterest.com/chrisxy_xin/_profile/"
-           target="_blank">
+           target="_blank"
+           rel="noopener noreferrer">
           PINTEREST ↗
         </a>
 
         <a href="https://www.tiktok.com/@chrisxy.xin"
-           target="_blank">
+           target="_blank"
+           rel="noopener noreferrer">
           TIKTOK ↗
         </a>
 
       </div>
+
     </section>
 
 
     <!-- 03: SPOTIFY -->
+
     <section class="card spotify">
+
       <div class="number">03 / LISTEN</div>
 
       <h2>My Soundtrack.</h2>
@@ -264,8 +294,10 @@ footer {
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
-    MY LITTLE CORNER · EST. 2026
+    PRIVATE EDITION · EST. 2026
   </footer>
 
 </div>
